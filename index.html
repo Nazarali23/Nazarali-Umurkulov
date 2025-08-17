@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Portfolio - Computer Engineering Student & Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Prevent source map errors -->
+    <script>
+        // Prevent source map and node_modules errors
+        window.addEventListener('error', function (e) {
+            if (e.message && (e.message.includes('source map') ||
+                e.message.includes('.map') ||
+                e.message.includes('ENOENT') ||
+                e.message.includes('node_modules'))) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        });
+
+        // Override console.error to filter out unwanted messages
+        const originalError = console.error;
+        console.error = function (...args) {
+            const message = args.join(' ');
+            if (message.includes('source map') ||
+                message.includes('.map') ||
+                message.includes('ENOENT') ||
+                message.includes('node_modules')) {
+                return;
+            }
+            originalError.apply(console, args);
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Language Selector Button -->
+    <button class="language-selector" id="languageSelector" title="Select Language">
+        <i class="fas fa-globe"></i>
+        <span class="current-lang">EN</span>
+    </button>
+
+    <!-- Language Dropdown Menu -->
+    <div class="language-dropdown" id="languageDropdown">
+        <div class="language-option" data-lang="en">
+            <span class="flag">🇺🇸</span>
+            <span class="lang-name">English</span>
+        </div>
+        <div class="language-option" data-lang="tk">
+            <span class="flag">🇹🇲</span>
+            <span class="lang-name">Türkmençe</span>
+        </div>
+        <div class="language-option" data-lang="tr">
+            <span class="flag">🇹🇷</span>
+            <span class="lang-name">Türkçe</span>
+        </div>
+        <div class="language-option" data-lang="ru">
+            <span class="flag">🇷🇺</span>
+            <span class="lang-name">Русский</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Portfolio</span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+                <div class="shape shape-7"></div>
+                <div class="shape shape-8"></div>
+                <div class="shape shape-9"></div>
+                <div class="shape shape-10"></div>
+                <div class="shape shape-11"></div>
+                <div class="shape shape-12"></div>
+                <div class="shape shape-13"></div>
+                <div class="shape shape-14"></div>
+                <div class="shape shape-15"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Hello, I'm</span>
+                        <span class="title-main">Nazarali Umurkulov</span>
+                        <span class="title-subtitle">Computer Engineering Student</span>
+                    </h1>
+                    <p class="hero-description">
+                        3rd-year Computer Engineering student at Tokat Gaziosmanpaşa University,
+                        passionate about creating innovative solutions and pushing the boundaries of technology.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="me/myp.png" alt="Profile Photo" class="profile-photo">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Mobile & Desktop Application Developer</h3>
+                    <p id="about-description">
+                        I am Nazarali Umurkulov, <span id="age"></span> years old, and a citizen of Turkmenistan. I am
+                        currently studying
+                        Computer Engineering in Turkey.<br>
+                        I am passionate about software development, algorithm design, and artificial intelligence
+                        applications. My focus is on creating efficient solutions in mobile and web projects while
+                        prioritizing user experience. I also have been working on projects involving data processing,
+                        automation, and smart planning systems.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Desktop Applications</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-cube"></i>
+                            <span>3D Modeling</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Game Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <h3>Planner AI</h3>
+                        <p>An AI-powered planner and reminder mobile app with futuristic UI and smart agent features.
+                            <br>
+                            <br>
+                            <u>Coming soon to Google Play Store...</u>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s1.jpg" alt="Planner AI Screenshot 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s2.jpg" alt="Planner AI Screenshot 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s3.jpg" alt="Planner AI Screenshot 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s5.jpg" alt="Planner AI Screenshot 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s4.jpg" alt="Planner AI Screenshot 5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C#</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Pascal</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Language Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">English</span>
+                            <div class="skill-level">B2 - Upper Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Turkish</span>
+                            <div class="skill-level">C1 - Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Turkmen</span>
+                            <div class="skill-level">C2 - Native</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Russian</span>
+                            <div class="skill-level">A1 - Beginner</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="25"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Specialized Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">3D Modeling (Blender)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UI/UX Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Game Development</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Artificial Intelligence</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="50"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certificates & Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-card" data-pdf="cert/Üretken_Yapay_Zeka_ile_LLM_Atölyesi_Sertifika.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>LLM Workshop</h3>
+                    <p>Generative AI & LLM Workshop Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/Python_Programlama_Eğitimi_Sertifika.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>Python Programming Training Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/Kişiselleştirilmiş_GPT'ler__Sertifika.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Personalized GPTs</h3>
+                    <p>Custom GPT Development Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/Yapay_Zekaya_Giriş_Sertifika.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>AI Introduction</h3>
+                    <p>Artificial Intelligence Basics Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/98917046150_pythonprogramlamaegitimi.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Python Training</h3>
+                    <p>Advanced Python Programming Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/certificate.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>General Certificate</h3>
+                    <p>Professional Development Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/C#_Programlama_Sertifika.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>C# Programming</h3>
+                    <p>C# Programming Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/Java_certificate.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Java Programming</h3>
+                    <p>Java Programming Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/C++_certificate.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>C++ Programming</h3>
+                    <p>C++ Programming Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/TEMEL_FOTOĞRAFÇILIK.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Basic Photography Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/WEB_OKURYAZARLIĞI.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Web Literacy</h3>
+                    <p>Web Literacy Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/BELGE_YÖNETIMI_VE_OFIS_UYGULAMALARI.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Office Applications</h3>
+                    <p>Document Management & Office Apps</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/TEKNOLOJI_INOVASYON_GIRIŞIMCILIK.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Tech Innovation</h3>
+                    <p>Technology Innovation & Entrepreneurship</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/YENİ_ILETIŞIM_TEKNOLOJILERI.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Communication Tech</h3>
+                    <p>New Communication Technologies</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/SISTEM_ANALIZI_VE_TASARIMI.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>System Analysis</h3>
+                    <p>System Analysis & Design Certificate</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Capturing moments and exploring the world through the lens</p>
+                    <div class="hobby-visual">
+                        <div class="camera-animation">
+                            <div class="camera-body"></div>
+                            <div class="camera-lens"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Painting</h3>
+                    <p>Expressing creativity through colors and brushstrokes</p>
+                    <div class="hobby-visual">
+                        <div class="painting-animation">
+                            <div class="brush"></div>
+                            <div class="canvas"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game Development</h3>
+                    <p>Creating immersive worlds and interactive experiences</p>
+                    <div class="hobby-visual">
+                        <div class="game-animation">
+                            <div class="game-cube"></div>
+                            <div class="game-sphere"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat
+                        about technology and innovation.</p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/nazarali-umurkulov" class="contact-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Nazarali23" class="contact-link github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/nazar.ali_23" class="contact-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://wa.me/905011467223?text=Merhaba!" target="_blank"
+                            class="contact-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Whatsapp</span>
+                        </a>
+                        <a href="mailto:nazaraliumirkulow@gmail.com" class="contact-link email">
+                            <i class="fas fa-envelope"></i>
+                            <span> Email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Portfolio</span>
+                    <div class="logo-dot"></div>
+                </div>
+                <p>&copy; 2025 Nazarali Umurkulov. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Project Gallery -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <button class="modal-nav prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img src="" alt="Project Screenshot" id="modalImage">
+                <button class="modal-nav next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <span class="image-counter" id="imageCounter">1 / 5</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Certificates -->
+    <div class="certificate-modal" id="certificateModal">
+        <div class="certificate-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="certificate-modal-body">
+                <iframe id="certificateFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
