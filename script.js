@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     initThemeToggle();
     initLanguageSelector();
     initNavigation();
-
+    initScrollAnimations();
+    initSkillBars();
+    initContactForm();
+    initFloatingShapes();
     // Sayfaya özel işlevsellikleri kontrol et ve sadece varsa başlat
 
     // Smooth Scroll (Tüm sayfalar için geçerli olabilir)
@@ -22,14 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Ana Sayfa (index.html) için özgü işlevler
-    const isHomePage = document.querySelector('.section-hero') !== null;
-    if (isHomePage) {
-        initScrollAnimations();
-        initSkillBars();
-        initContactForm();
-        initFloatingShapes();
-    }
 
     // Projeler Sayfası (projects.html) için özgü işlev
     const isProjectsPage = document.querySelector('.project-gallery') !== null;
