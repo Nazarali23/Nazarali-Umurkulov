@@ -885,7 +885,7 @@ body {
 }
 
 .btn {
-    padding: 12px 24px;
+    padding: 12px 20px;
     border: none;
     border-radius: var(--border-radius);
     font-weight: 600;

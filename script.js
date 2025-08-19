@@ -857,8 +857,8 @@ const translations = {
         'lang-changed': 'Language changed to {lang}!',
 
         // New translations for "View Projects" and "View Certificates" buttons
-        'btn-view-projects': 'View Projects',
-        'btn-view-certificates': 'View Certificates'
+        'btn-view-projects': 'Projects',
+        'btn-view-certificates': 'Certificates'
     },
 
     tk: {
@@ -994,8 +994,8 @@ const translations = {
         'lang-changed': 'Dil {lang} diline geçildi!',
 
         // New translations for "View Projects" and "View Certificates" buttons
-        'btn-view-projects': 'Layihalary Gör',
-        'btn-view-certificates': 'Şahadatnamalary Gör'
+        'btn-view-projects': 'Taslamalar',
+        'btn-view-certificates': 'Sertifikatlar'
     },
 
     tr: {
@@ -1131,8 +1131,8 @@ const translations = {
         'lang-changed': 'Dil {lang} diline değiştirildi!',
 
         // New translations for "View Projects" and "View Certificates" buttons
-        'btn-view-projects': 'Projeleri Gör',
-        'btn-view-certificates': 'Sertifikaları Gör'
+        'btn-view-projects': 'Projeler',
+        'btn-view-certificates': 'Sertifikalar'
     },
 
     ru: {
@@ -1268,8 +1268,8 @@ const translations = {
         'lang-changed': 'Язык изменен на {lang}!',
 
         // New translations for "View Projects" and "View Certificates" buttons
-        'btn-view-projects': 'Смотреть проекты',
-        'btn-view-certificates': 'Смотреть сертификаты'
+        'btn-view-projects': 'Проекты',
+        'btn-view-certificates': 'Сертификаты'
     }
 };
 
