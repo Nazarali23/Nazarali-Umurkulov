@@ -882,6 +882,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: 1rem;
+flex-wrap: nowrap;
 }
 
 .btn {
