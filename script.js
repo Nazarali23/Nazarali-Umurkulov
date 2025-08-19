@@ -1009,12 +1009,12 @@ const translations = {
         'nav-contact': 'İletişim',
 
         // Hero Section
-        'word-compute': 'Sela',
+        'word-compute': 'Merhab',
         'hero-title': 'Adınız',
         'hero-subtitle': 'Bilgisayar Mühendisliği Öğrencisi',
         'hero-description': 'Tokat Gaziosmanpaşa Üniversitesi 3. sınıf Bilgisayar Mühendisliği öğrencisi, yenilikçi çözümler yaratmaya ve teknolojinin sınırlarını zorlamaya tutkulu.',
         'btn-download-cv': 'CV İndir',
-        'letter-o': 'm',
+        'letter-o': 'a',
         'word-engineering': 'Ben',
         // About Section
         'about-title': 'Hakkımda',
