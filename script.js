@@ -1,42 +1,14 @@
-// Portfolio Website JavaScript
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Prevent source map errors and console noise
-    window.addEventListener('error', function (e) {
-        if (e.message.includes('source map') ||
-            e.message.includes('.map') ||
-            e.message.includes('ENOENT') ||
-            e.message.includes('node_modules')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    // Override console methods to filter out source map errors
-    const originalConsoleError = console.error;
-    console.error = function (...args) {
-        const message = args.join(' ');
-        if (message.includes('source map') ||
-            message.includes('.map') ||
-            message.includes('ENOENT') ||
-            message.includes('node_modules')) {
-            return; // Don't show these errors
-        }
-        originalConsoleError.apply(console, args);
-    };
-
-    // Initialize all functionality
+    // Tüm sayfalarda çalışması gereken ortak işlevsellikler
     initThemeToggle();
     initLanguageSelector();
     initNavigation();
-    initScrollAnimations();
-    initSkillBars();
-    initProjectGallery();
-    initCertificateHandlers();
-    initContactForm();
-    initFloatingShapes();
 
-    // Add smooth scroll behavior for navigation links
+    // Sayfaya özel işlevsellikleri kontrol et ve sadece varsa başlat
+
+    // Smooth Scroll (Tüm sayfalar için geçerli olabilir)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -49,6 +21,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Ana Sayfa (index.html) için özgü işlevler
+    const isHomePage = document.querySelector('.section-hero') !== null;
+    if (isHomePage) {
+        initScrollAnimations();
+        initSkillBars();
+        initContactForm();
+        initFloatingShapes();
+    }
+
+    // Projeler Sayfası (projects.html) için özgü işlev
+    const isProjectsPage = document.querySelector('.project-gallery') !== null;
+    if (isProjectsPage) {
+        initProjectGallery();
+    }
+
+    // Sertifikalar Sayfası (certificates.html) için özgü işlev
+    const isCertificatesPage = document.querySelector('.certificates-grid') !== null;
+    if (isCertificatesPage) {
+        initCertificateHandlers();
+    }
 });
 // Doğum tarihinizi girin (yıl, ay-1, gün)
 const birthDate = new Date(2004, 4, 23); // Örnek: 15 Ocak 2003
@@ -111,24 +104,30 @@ function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    // Navbar background on scroll
+    // Navbar background on scroll (rAF-coalesced)
+    let navTicking = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+        if (navTicking) return;
+        navTicking = true;
+        requestAnimationFrame(() => {
+            if (window.scrollY > 100) {
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                } else {
+                    navbar.style.background = 'rgba(250, 250, 250, 0.98)';
+                }
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
             } else {
-                navbar.style.background = 'rgba(250, 250, 250, 0.98)';
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                } else {
+                    navbar.style.background = 'rgba(250, 250, 250, 0.95)';
+                }
+                navbar.style.boxShadow = 'none';
             }
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            } else {
-                navbar.style.background = 'rgba(250, 250, 250, 0.95)';
-            }
-            navbar.style.boxShadow = 'none';
-        }
-    });
+            navTicking = false;
+        });
+    }, { passive: true });
 
     // Mobile menu toggle
     if (hamburger) {
@@ -391,16 +390,21 @@ function initContactForm() {
 function initFloatingShapes() {
     const shapes = document.querySelectorAll('.shape');
 
-    // Add parallax effect to shapes
+    // rAF-coalesced parallax for shapes
+    let shapesTicking = false;
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-
-        shapes.forEach((shape, index) => {
-            const speed = (index + 1) * 0.1;
-            shape.style.transform = `translateY(${rate * speed}px) rotate(${scrolled * 0.1}deg)`;
+        if (shapesTicking) return;
+        shapesTicking = true;
+        requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.1;
+                shape.style.transform = `translateY(${rate * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+            shapesTicking = false;
         });
-    });
+    }, { passive: true });
 }
 
 // Notification system
@@ -475,8 +479,6 @@ function revealOnScroll() {
     });
 }
 
-// Add scroll event listener for reveal animations
-window.addEventListener('scroll', revealOnScroll);
 
 // Parallax effect for hero section
 function parallaxHero() {
@@ -489,8 +491,8 @@ function parallaxHero() {
     }
 }
 
-// Add scroll event listener for parallax
-window.addEventListener('scroll', parallaxHero);
+// (Removed unthrottled parallax listener; throttled one is attached below)
+// window.addEventListener('scroll', parallaxHero);
 
 // Typing effect for hero title
 function initTypingEffect() {
@@ -551,8 +553,8 @@ document.head.appendChild(notificationStyles);
 const revealStyles = document.createElement('style');
 revealStyles.textContent = `
     section {
-        opacity: 0;
-        transform: translateY(50px);
+        opacity: 1;
+        transform: none;
         transition: all 0.8s ease-out;
     }
     
@@ -587,8 +589,8 @@ function throttle(func, limit) {
 const throttledRevealOnScroll = throttle(revealOnScroll, 100);
 const throttledParallaxHero = throttle(parallaxHero, 16);
 
-window.addEventListener('scroll', throttledRevealOnScroll);
-window.addEventListener('scroll', throttledParallaxHero);
+window.addEventListener('scroll', throttledRevealOnScroll, { passive: true });
+window.addEventListener('scroll', throttledParallaxHero, { passive: true });
 
 // Add loading animation
 window.addEventListener('load', () => {
@@ -692,7 +694,7 @@ function initCursorTrail() {
         mouseX = e.clientX;
         mouseY = e.clientY;
         cursor.style.opacity = '0.6';
-    });
+    }, { passive: true });
 
     function animateCursor() {
         const dx = mouseX - cursorX;
@@ -735,13 +737,15 @@ const translations = {
         'nav-certificates': 'Certificates',
         'nav-hobbies': 'Hobbies',
         'nav-contact': 'Contact',
+        'word-engineering': 'I\'m',
 
         // Hero Section
-        'hero-hello': 'Hello, I\'m',
+        'word-compute': 'Hell',
         'hero-title': 'Your Name',
         'hero-subtitle': 'Computer Engineering Student',
         'hero-description': '3rd-year Computer Engineering student at Tokat Gaziosmanpaşa University, passionate about creating innovative solutions and pushing the boundaries of technology.',
         'btn-download-cv': 'Download CV',
+        'letter-o': 'o',
 
         // About Section
         'about-title': 'About Me',
@@ -855,7 +859,11 @@ const translations = {
         'notification-success': 'Success!',
         'notification-error': 'Error!',
         'notification-info': 'Info!',
-        'lang-changed': 'Language changed to {lang}!'
+        'lang-changed': 'Language changed to {lang}!',
+
+        // New translations for "View Projects" and "View Certificates" buttons
+        'btn-view-projects': 'View Projects',
+        'btn-view-certificates': 'View Certificates'
     },
 
     tk: {
@@ -869,12 +877,13 @@ const translations = {
         'nav-contact': 'Habarlaşmak',
 
         // Hero Section
-        'hero-hello': 'Salam, men',
+        'word-compute': 'Sala',
         'hero-title': 'Adyňyz',
         'hero-subtitle': 'Kompýuter Inženeriýasy Talyby',
         'hero-description': 'Tokat Gaziosmanpaşa Uniwersitetinde 3-nji ýyl Kompýuter Inženeriýasy talyby, innovasion çözgütler döretmäge we tehnologiýanyň çäklerini zorlamaga höwesli.',
         'btn-download-cv': 'CV Göçür',
-
+        'letter-o': 'm',
+        'word-engineering': 'Men',
         // About Section
         'about-title': 'Men Hakda',
         'about-role': 'Mobil we Desktop Programma Önümçisi',
@@ -987,7 +996,11 @@ const translations = {
         'notification-success': 'Üstünlik!',
         'notification-error': 'Hata!',
         'notification-info': 'Maglumat!',
-        'lang-changed': 'Dil {lang} diline geçildi!'
+        'lang-changed': 'Dil {lang} diline geçildi!',
+
+        // New translations for "View Projects" and "View Certificates" buttons
+        'btn-view-projects': 'Layihalary Gör',
+        'btn-view-certificates': 'Şahadatnamalary Gör'
     },
 
     tr: {
@@ -1001,12 +1014,13 @@ const translations = {
         'nav-contact': 'İletişim',
 
         // Hero Section
-        'hero-hello': 'Merhaba, ben',
+        'word-compute': 'Sela',
         'hero-title': 'Adınız',
         'hero-subtitle': 'Bilgisayar Mühendisliği Öğrencisi',
         'hero-description': 'Tokat Gaziosmanpaşa Üniversitesi 3. sınıf Bilgisayar Mühendisliği öğrencisi, yenilikçi çözümler yaratmaya ve teknolojinin sınırlarını zorlamaya tutkulu.',
         'btn-download-cv': 'CV İndir',
-
+        'letter-o': 'm',
+        'word-engineering': 'Ben',
         // About Section
         'about-title': 'Hakkımda',
         'about-role': 'Mobil ve Masaüstü Uygulama Geliştiricisi',
@@ -1119,7 +1133,11 @@ const translations = {
         'notification-success': 'Başarılı!',
         'notification-error': 'Hata!',
         'notification-info': 'Bilgi!',
-        'lang-changed': 'Dil {lang} diline değiştirildi!'
+        'lang-changed': 'Dil {lang} diline değiştirildi!',
+
+        // New translations for "View Projects" and "View Certificates" buttons
+        'btn-view-projects': 'Projeleri Gör',
+        'btn-view-certificates': 'Sertifikaları Gör'
     },
 
     ru: {
@@ -1133,12 +1151,13 @@ const translations = {
         'nav-contact': 'Контакты',
 
         // Hero Section
-        'hero-hello': 'Привет, я',
+        'word-compute': 'Приве',
         'hero-title': 'Ваше Имя',
         'hero-subtitle': 'Студент Компьютерной Инженерии',
         'hero-description': 'Студент 3-го курса Компьютерной Инженерии в Университете Токат Газиосманпаша, увлеченный созданием инновационных решений и расширением границ технологий.',
         'btn-download-cv': 'Скачать CV',
-
+        'letter-o': 'т',
+        'word-engineering': 'Я',
         // About Section
         'about-title': 'Обо мне',
         'about-role': 'Разработчик Мобильных и Десктопных Приложений',
@@ -1251,7 +1270,11 @@ const translations = {
         'notification-success': 'Успех!',
         'notification-error': 'Ошибка!',
         'notification-info': 'Информация!',
-        'lang-changed': 'Язык изменен на {lang}!'
+        'lang-changed': 'Язык изменен на {lang}!',
+
+        // New translations for "View Projects" and "View Certificates" buttons
+        'btn-view-projects': 'Смотреть проекты',
+        'btn-view-certificates': 'Смотреть сертификаты'
     }
 };
 
@@ -1326,17 +1349,20 @@ function updatePageContent(lang) {
     });
 
     // Hero Section
-    const titleLine = document.querySelector('.title-line');
-    if (titleLine) titleLine.textContent = currentTranslations['hero-hello'];
+    const titleLine = document.querySelector('.word-compute');
+    if (titleLine) titleLine.textContent = currentTranslations['word-compute'];
+
+    const titleoText = document.querySelector('.letter-o-text');
+    if (titleoText) titleoText.textContent = currentTranslations['letter-o'];
+
+    const titleEngineering = document.querySelector('.word-engineering');
+    if (titleEngineering) titleEngineering.textContent = currentTranslations['word-engineering'];
 
     const titleSubtitle = document.querySelector('.title-subtitle');
     if (titleSubtitle) titleSubtitle.textContent = currentTranslations['hero-subtitle'];
 
     const heroDescription = document.querySelector('.hero-description');
     if (heroDescription) heroDescription.textContent = currentTranslations['hero-description'];
-
-    const downloadCVBtn = document.querySelector('.btn-secondary');
-    if (downloadCVBtn) downloadCVBtn.textContent = currentTranslations['btn-download-cv'];
 
     // Section Titles
     const aboutTitle = document.querySelector('#about .section-title');
@@ -1391,4 +1417,11 @@ function updatePageContent(lang) {
     if (aboutDescription) {
         aboutDescription.innerHTML = translations[lang]['about-description'] || translations['en']['about-description'];
     }
+
+    // Hero Buttons
+    const projectsBtn = document.querySelector('.btn-projects');
+    if (projectsBtn) projectsBtn.textContent = currentTranslations['btn-view-projects'];
+
+    const certificatesBtn = document.querySelector('.btn-certificates');
+    if (certificatesBtn) certificatesBtn.textContent = currentTranslations['btn-view-certificates'];
 }

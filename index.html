@@ -7,7 +7,7 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Portfolio - Computer Engineering Student & Developer</title>
+    <title>Portfolio - Nazarali Umurkulov</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -40,15 +40,15 @@
             originalError.apply(console, args);
         };
     </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T295JRQMQR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T295JRQMQR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-T295JRQMQR');
-</script>
+        gtag('config', 'G-T295JRQMQR');
+    </script>
 </head>
 
 <body>
@@ -87,15 +87,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Portfolio</span>
+                <span class="logo-text"><a href="index.html">Portfolio</a></span>
                 <div class="logo-dot"></div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
                 <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -130,9 +130,22 @@
         </div>
         <div class="hero-container">
             <div class="hero-content">
+                <div class="homehero">
+                    <h1 class="homehero-title" aria-label="Computer Engineering">
+                        <span class="word-compute">Hell</span><span class="letter-o">
+                            <span class="letter-o-text">o</span>
+                            <div class="image-container">
+                                <img src="me/myp.png" class="leaning-photo" id="leaningPhoto" loading="eager"
+                                    decoding="async" alt="Profile Photo" />
+                            </div>
+                        </span>
+                        <br>
+                        <hr class="hrw">
+                        <span class="word-engineering"> I'm</span>
+                    </h1>
+                </div>
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span class="title-line">Hello, I'm</span>
                         <span class="title-main">Nazarali Umurkulov</span>
                         <span class="title-subtitle">Computer Engineering Student</span>
                     </h1>
@@ -140,14 +153,13 @@
                         3rd-year Computer Engineering student at Tokat Gaziosmanpaşa University,
                         passionate about creating innovative solutions and pushing the boundaries of technology.
                     </p>
-                </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <img src="me/myp.png" alt="Profile Photo" class="profile-photo">
-                        <div class="image-glow"></div>
+                    <div class="hero-buttons" style="margin-top: 2rem; margin-bottom: 2rem;">
+                        <a href="projects.html" class="btn btn-primary btn-projects">View Projects</a>
+                        <a href="certificates.html" class="btn btn-secondary btn-certificates">Certificates</a>
                     </div>
                 </div>
             </div>
+            <br> <br>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-arrow"></div>
@@ -195,50 +207,6 @@
             </div>
         </div>
     </section>
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-content">
-                        <h3>Planner AI</h3>
-                        <p>An AI-powered planner and reminder mobile app with futuristic UI and smart agent features.
-                            <br>
-                            <br>
-                            <u>Coming soon to Google Play Store...</u>
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">AI</span>
-                            <span class="tech-tag">Mobile</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="planneraiscrnshots/s1.jpg" alt="Planner AI Screenshot 1">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="planneraiscrnshots/s2.jpg" alt="Planner AI Screenshot 2">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="planneraiscrnshots/s3.jpg" alt="Planner AI Screenshot 3">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="planneraiscrnshots/s5.jpg" alt="Planner AI Screenshot 4">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="planneraiscrnshots/s4.jpg" alt="Planner AI Screenshot 5">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
@@ -355,169 +323,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Certificates & Achievements</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="certificates-grid">
-                <div class="certificate-card" data-pdf="cert/Üretken_Yapay_Zeka_ile_LLM_Atölyesi_Sertifika.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>LLM Workshop</h3>
-                    <p>Generative AI & LLM Workshop Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/Python_Programlama_Eğitimi_Sertifika.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Python Programming</h3>
-                    <p>Python Programming Training Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/Kişiselleştirilmiş_GPT'ler__Sertifika.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Personalized GPTs</h3>
-                    <p>Custom GPT Development Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/Yapay_Zekaya_Giriş_Sertifika.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>AI Introduction</h3>
-                    <p>Artificial Intelligence Basics Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/98917046150_pythonprogramlamaegitimi.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Python Training</h3>
-                    <p>Advanced Python Programming Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/certificate.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>General Certificate</h3>
-                    <p>Professional Development Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/C#_Programlama_Sertifika.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>C# Programming</h3>
-                    <p>C# Programming Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/Java_certificate.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Java Programming</h3>
-                    <p>Java Programming Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/C++_certificate.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>C++ Programming</h3>
-                    <p>C++ Programming Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/TEMEL_FOTOĞRAFÇILIK.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Photography</h3>
-                    <p>Basic Photography Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/WEB_OKURYAZARLIĞI.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Web Literacy</h3>
-                    <p>Web Literacy Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/BELGE_YÖNETIMI_VE_OFIS_UYGULAMALARI.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Office Applications</h3>
-                    <p>Document Management & Office Apps</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/TEKNOLOJI_INOVASYON_GIRIŞIMCILIK.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Tech Innovation</h3>
-                    <p>Technology Innovation & Entrepreneurship</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/YENİ_ILETIŞIM_TEKNOLOJILERI.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Communication Tech</h3>
-                    <p>New Communication Technologies</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-                <div class="certificate-card" data-pdf="cert/SISTEM_ANALIZI_VE_TASARIMI.pdf">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>System Analysis</h3>
-                    <p>System Analysis & Design Certificate</p>
-                    <div class="certificate-preview">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Hobbies Section -->
     <section id="hobbies" class="hobbies">
         <div class="container">
@@ -632,35 +437,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Modal for Project Gallery -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <button class="modal-nav prev-btn" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <img src="" alt="Project Screenshot" id="modalImage">
-                <button class="modal-nav next-btn" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            <div class="modal-footer">
-                <span class="image-counter" id="imageCounter">1 / 5</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Certificates -->
-    <div class="certificate-modal" id="certificateModal">
-        <div class="certificate-modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="certificate-modal-body">
-                <iframe id="certificateFrame" src="" frameborder="0"></iframe>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Projects - Nazarali Umurkulov</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text"><a href="index.html">Portfolio</a></span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="index.html#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <section class="projects" style="padding-top:120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <h3>Planner AI</h3>
+                        <p>An AI-powered planner and reminder mobile app with futuristic UI and smart agent
+                            features.<br><br>
+                            <u>Coming soon to Google Play Store...</u>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s1.jpg" alt="Planner AI Screenshot 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s2.jpg" alt="Planner AI Screenshot 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s3.jpg" alt="Planner AI Screenshot 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s5.jpg" alt="Planner AI Screenshot 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="planneraiscrnshots/s4.jpg" alt="Planner AI Screenshot 5">
+                    </div>
+                </div>
+                <!-- Diğer projeler burada eklenebilir -->
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Portfolio</span>
+                    <div class="logo-dot"></div>
+                </div>
+                <p>&copy; 2025 Nazarali Umurkulov. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal for Project Gallery -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <button class="modal-nav prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img src="" alt="Project Screenshot" id="modalImage">
+                <button class="modal-nav next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <span class="image-counter" id="imageCounter">1 / 5</span>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            // HTML içeriği tamamen yüklendikten sonra fonksiyonu çağır
+            document.addEventListener('DOMContentLoaded', initProjectGallery);
+            document.addEventListener('DOMContentLoaded', initNavigation);
+            document.addEventListener('DOMContentLoaded', initScrollAnimations);
+        </script>
+</body>
+
+</html>
