@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         initCertificateHandlers();
     }
 });
+
 // Doğum tarihinizi girin (yıl, ay-1, gün)
 const birthDate = new Date(2004, 4, 23); // Örnek: 15 Ocak 2003
 
@@ -720,6 +721,7 @@ function initCursorTrail() {
 if (window.innerWidth > 768) {
     initCursorTrail();
 }
+// Three.js ve GLTFLoader CDN eklenmiş olmalı
 
 // Language translations
 const translations = {

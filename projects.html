@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Projects - Nazarali Umurkulov</title>
     <link rel="stylesheet" href="styles.css">
@@ -15,7 +14,9 @@
 </head>
 
 <body>
-
+    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -61,19 +62,55 @@
                 </div>
                 <div class="project-gallery">
                     <div class="gallery-item">
-                        <img src="planneraiscrnshots/s1.jpg" alt="Planner AI Screenshot 1">
+                        <img src="softwareproj/planneraiscrnshots/s1.jpg" alt="Planner AI Screenshot 1">
                     </div>
                     <div class="gallery-item">
-                        <img src="planneraiscrnshots/s2.jpg" alt="Planner AI Screenshot 2">
+                        <img src="softwareproj/planneraiscrnshots/s2.jpg" alt="Planner AI Screenshot 2">
                     </div>
                     <div class="gallery-item">
-                        <img src="planneraiscrnshots/s3.jpg" alt="Planner AI Screenshot 3">
+                        <img src="softwareproj/planneraiscrnshots/s3.jpg" alt="Planner AI Screenshot 3">
                     </div>
                     <div class="gallery-item">
-                        <img src="planneraiscrnshots/s5.jpg" alt="Planner AI Screenshot 4">
+                        <img src="softwareproj/planneraiscrnshots/s5.jpg" alt="Planner AI Screenshot 4">
                     </div>
                     <div class="gallery-item">
-                        <img src="planneraiscrnshots/s4.jpg" alt="Planner AI Screenshot 5">
+                        <img src="softwareproj/planneraiscrnshots/s4.jpg" alt="Planner AI Screenshot 5">
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <h3>Indoor Pool 3D Model</h3>
+                        <p>An Indoor pool with sauna.
+
+
+                            <a href=""></a>
+                        </p>
+                        <div id="modelContainer" class="model-container"
+                            data-model="blenderproj/havuz_kapali/havuz_kapali_tam_camsiz.glb"
+                            style="width: 100vw; height: 50vh;">
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Blender</span>
+                            <span class="tech-tag">3D</span>
+                            <span class="tech-tag">AR/VR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="blenderproj/havuz_kapali/untitled1.png" alt="Havuz Kapalı Screenshot 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="blenderproj/havuz_kapali/untitled2.png" alt="Havuz Kapalı Screenshot 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="blenderproj/havuz_kapali/untitled3.png" alt="Havuz Kapalı Screenshot 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="blenderproj/havuz_kapali/untitled4.png" alt="Havuz Kapalı Screenshot 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="blenderproj/havuz_kapali/untitled5.png" alt="Havuz Kapalı Screenshot 5">
                     </div>
                 </div>
                 <!-- Diğer projeler burada eklenebilir -->
@@ -109,11 +146,13 @@
             </div>
         </div>
         <script src="script.js"></script>
+        <script type="module" src="glbscript.js"></script>
         <script>
             // HTML içeriği tamamen yüklendikten sonra fonksiyonu çağır
             document.addEventListener('DOMContentLoaded', initProjectGallery);
             document.addEventListener('DOMContentLoaded', initNavigation);
             document.addEventListener('DOMContentLoaded', initScrollAnimations);
+            document.addEventListener('DOMContentLoaded', initModels);
         </script>
 </body>
 
