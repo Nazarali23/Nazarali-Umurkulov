@@ -1059,6 +1059,17 @@ body {
     margin-bottom: 1rem;
 }
 
+.project-title {
+    font-size: 1.5rem;
+    /* Reduced from 3rem */
+    font-weight: 800;
+    background: var(--text-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
 .title-underline {
     width: 80px;
     height: 4px;
@@ -1237,6 +1248,28 @@ body {
 
 .project-card.featured:hover .project-overlay {
     opacity: 1;
+}
+
+.software-proj {
+    margin-bottom: 1.5em;
+    padding: 15px;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.blender-proj {
+    margin-bottom: 1.5em;
+    padding: 15px;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
 }
 
 .view-project-btn {
