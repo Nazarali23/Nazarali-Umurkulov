@@ -860,7 +860,66 @@ const translations = {
 
         // New translations for "View Projects" and "View Certificates" buttons
         'btn-view-projects': 'Projects',
-        'btn-view-certificates': 'Certificates'
+        'btn-view-certificates': 'Certificates',
+
+        // Hobbies Details
+        'hobby-photo-title': 'Photography',
+        'hobby-photo-desc': 'Capturing moments and exploring the world through the lens',
+        'hobby-paint-title': 'Painting',
+        'hobby-paint-desc': 'Expressing creativity through colors and brushstrokes',
+        'hobby-game-title': 'Game Development',
+        'hobby-game-desc': 'Creating immersive worlds and interactive experiences',
+
+        // Contact Details
+        'contact-title-heading': 'Get In Touch',
+        'contact-heading': 'Let\'s Connect',
+        'contact-desc': 'I\'m always open to discussing new opportunities, interesting projects, or just having a chat about technology and innovation.',
+        'contact-name': 'Your Name',
+        'contact-email': 'Your Email',
+        'contact-msg': 'Your Message',
+        'btn-send': 'Send Message',
+
+        // Skills Details
+        'skill-flutter-name': 'Flutter',
+        'skill-html-name': 'HTML/CSS',
+        'skill-csharp-name': 'C#',
+        'skill-java-name': 'Java',
+        'skill-python-name': 'Python',
+        'skill-pascal-name': 'Pascal',
+        'skill-3d-name': '3D Modeling (Blender)',
+        'skill-ui-name': 'UI/UX Design',
+        'skill-game-name': 'Game Development',
+        'skill-ai-name': 'Artificial Intelligence',
+
+        // Projects Page
+        'projects-software': 'Software Projects',
+        'project-pawconnect': 'PawConnect',
+        'project-pawconnect-desc': 'PawConnect is a streamlined platform that connects animal shelters with families looking to adopt, volunteer, or donate. It simplifies the journey of finding a "forever home" while providing a secure space to support animal welfare with just a few clicks.',
+        'project-demo': 'Click to see static demo version...',
+        'project-planner': 'Planner AI',
+        'project-planner-desc': 'An AI-powered planner and reminder mobile app with futuristic UI and smart agent features.',
+        'project-coming': 'Coming soon to Google Play Store...',
+        'tech-html': 'Html&Css',
+        'tech-js-php': 'Javascript&PHP',
+        'tech-mobile': 'Mobile&Desktop',
+        'tech-mysql': 'MySQL',
+        'tech-flutter': 'Flutter',
+        'tech-ai': 'AI',
+        'tech-blender': 'Blender',
+        'tech-3d': '3D',
+        'tech-ar': 'AR/VR',
+        'projects-modeling': 'Modelling Projects',
+        'project-indoor-pool': 'Indoor Pool 3D Model',
+        'project-indoor-pool-desc': 'Indoor pool with a Turkish bath and sauna',
+        'btn-view-3d': 'Click for View 3D Model in new page',
+        'project-home': 'Home 3D Model',
+        'project-home-desc': 'My first 3D Model Project',
+
+        // Certificates Page
+        'certs-redhat': 'RedHat System Administration',
+        'certs-redhat-desc': 'RedHat Certified System Administrator',
+        'certs-teknofest': 'Teknofest 2025',
+        'certs-teknofest-desc': 'Swarm Drone Category'
     },
 
     tk: {
@@ -997,7 +1056,66 @@ const translations = {
 
         // New translations for "View Projects" and "View Certificates" buttons
         'btn-view-projects': 'Taslamalar',
-        'btn-view-certificates': 'Sertifikatlar'
+        'btn-view-certificates': 'Sertifikatlar',
+
+        // Hobbies Details
+        'hobby-photo-title': 'Fotografiýa',
+        'hobby-photo-desc': 'Sagatlary ýazdyrmak we dünýäni obýektiw arkaly gözlemek',
+        'hobby-paint-title': 'Surat Çekmek',
+        'hobby-paint-desc': 'Reňkler we çetkiler arkaly döredijiligi aňlatmak',
+        'hobby-game-title': 'Oýun Önümçiligi',
+        'hobby-game-desc': 'Girýän dünýäler we interaktiw tejribeler döretmek',
+
+        // Contact Details
+        'contact-title-heading': 'Habarlaşmak',
+        'contact-heading': 'Gel Habarlaşalyň',
+        'contact-desc': 'Men täze mümkinçilikler, gyzykly layihalar hakda gürlemäge ýa-da diňe tehnologiýa we inowasiýa hakda söhbet etmäge her wagt taýýar.',
+        'contact-name': 'Adyňyz',
+        'contact-email': 'Emailiňiz',
+        'contact-msg': 'Habar',
+        'btn-send': 'Habar Iber',
+
+        // Skills Details
+        'skill-flutter-name': 'Flutter',
+        'skill-html-name': 'HTML/CSS',
+        'skill-csharp-name': 'C#',
+        'skill-java-name': 'Java',
+        'skill-python-name': 'Python',
+        'skill-pascal-name': 'Pascal',
+        'skill-3d-name': '3D Modelleme (Blender)',
+        'skill-ui-name': 'UI/UX Dizaýn',
+        'skill-game-name': 'Oýun Önümçiligi',
+        'skill-ai-name': 'Süni Akyl',
+
+        // Projects Page
+        'projects-software': 'Programma Taslamalary',
+        'project-pawconnect': 'PawConnect',
+        'project-pawconnect-desc': 'PawConnect haýwan pagtanamalaryny adoption etmek, meretlenmek ýa-da haýwa gorag bilen meşgul bolmak islendik maşatlary birleşdirýän sadeleşdirilen platforma. "Abadan öýüni tapmak" aňtawaryny ýolalgylaşdyrýar we haýwa hojalygynynyň goldawyna tertip ýalawyny berýär.',
+        'project-demo': 'Statiki demo görnükesini görmek üçin tikiň...',
+        'project-planner': 'Planner AI',
+        'project-planner-desc': 'Futuristik UI we akylly agent aýratynlyklary bilen AI bilen işleýän planlaşdyryjy we ýatlatma mobil programmasy.',
+        'project-coming': 'Google Play Store-a çykmak üçin garaşyn...',
+        'tech-html': 'Html&Css',
+        'tech-js-php': 'Javascript&PHP',
+        'tech-mobile': 'Mobile&Desktop',
+        'tech-mysql': 'MySQL',
+        'tech-flutter': 'Flutter',
+        'tech-ai': 'AI',
+        'tech-blender': 'Blender',
+        'tech-3d': '3D',
+        'tech-ar': 'AR/VR',
+        'projects-modeling': 'Modelleme Taslamalary',
+        'project-indoor-pool': 'Çapalagy Basseýn 3D Model',
+        'project-indoor-pool-desc': 'Tämä sauna we hammama bilen çapalagy basseýn',
+        'btn-view-3d': 'Täze sahyfada 3D Modeli görüň',
+        'project-home': 'Öý 3D Model',
+        'project-home-desc': 'Ilkinji 3D Model Taslamam',
+
+        // Certificates Page
+        'certs-redhat': 'RedHat Sistem Administrasiýasy',
+        'certs-redhat-desc': 'RedHat Sertifikasylanan Sistem Administratory',
+        'certs-teknofest': 'Teknofest 2025',
+        'certs-teknofest-desc': 'Ulak Drone Kategoriýasy'
     },
 
     tr: {
@@ -1134,7 +1252,66 @@ const translations = {
 
         // New translations for "View Projects" and "View Certificates" buttons
         'btn-view-projects': 'Projeler',
-        'btn-view-certificates': 'Sertifikalar'
+        'btn-view-certificates': 'Sertifikalar',
+
+        // Hobbies Details
+        'hobby-photo-title': 'Fotoğrafçılık',
+        'hobby-photo-desc': 'Anları yakalamak ve dünyayı lens aracılığıyla keşfetmek',
+        'hobby-paint-title': 'Resim',
+        'hobby-paint-desc': 'Renkler ve fırça darbeleri ile yaratıcılığı ifade etmek',
+        'hobby-game-title': 'Oyun Geliştirme',
+        'hobby-game-desc': 'Sürükleyici dünyalar ve interaktif deneyimler yaratmak',
+
+        // Contact Details
+        'contact-title-heading': 'İletişime Geç',
+        'contact-heading': 'Bağlantı Kuralım',
+        'contact-desc': 'Yeni fırsatlar, ilginç projeler hakkında konuşmaya veya sadece teknoloji ve inovasyon hakkında sohbet etmeye her zaman açığım.',
+        'contact-name': 'Adınız',
+        'contact-email': 'E-posta Adresiniz',
+        'contact-msg': 'Mesajınız',
+        'btn-send': 'Mesaj Gönder',
+
+        // Skills Details
+        'skill-flutter-name': 'Flutter',
+        'skill-html-name': 'HTML/CSS',
+        'skill-csharp-name': 'C#',
+        'skill-java-name': 'Java',
+        'skill-python-name': 'Python',
+        'skill-pascal-name': 'Pascal',
+        'skill-3d-name': '3D Modelleme (Blender)',
+        'skill-ui-name': 'UI/UX Tasarım',
+        'skill-game-name': 'Oyun Geliştirme',
+        'skill-ai-name': 'Yapay Zeka',
+
+        // Projects Page
+        'projects-software': 'Yazılım Projeleri',
+        'project-pawconnect': 'PawConnect',
+        'project-pawconnect-desc': 'PawConnect, hayvan barınaklarını benimseme, gönüllü olmak veya bağış yapmak isteyen ailelerle birleştiren akımlı bir platformdur. "Sonsuza kadar ev" bulma yolculuğunu basitleştirirken, hayvan refahına destek olmak için güvenli bir alan sağlar.',
+        'project-demo': 'Statik demo sürümünü görmek için tıklayın...',
+        'project-planner': 'Planner AI',
+        'project-planner-desc': 'Futuristik UI ve akıllı ajan özellikleri ile AI destekli planlayıcı ve hatırlatıcı mobil uygulama.',
+        'project-coming': 'Google Play Store\'da yakında...',
+        'tech-html': 'Html&Css',
+        'tech-js-php': 'Javascript&PHP',
+        'tech-mobile': 'Mobile&Desktop',
+        'tech-mysql': 'MySQL',
+        'tech-flutter': 'Flutter',
+        'tech-ai': 'AI',
+        'tech-blender': 'Blender',
+        'tech-3d': '3D',
+        'tech-ar': 'AR/VR',
+        'projects-modeling': 'Modelleme Projeleri',
+        'project-indoor-pool': 'Kapalı Havuz 3D Modeli',
+        'project-indoor-pool-desc': 'Türk hamamı ve saunalı kapalı havuz',
+        'btn-view-3d': 'Yeni sayfada 3D Modeli Görüntüle',
+        'project-home': 'Ev 3D Modeli',
+        'project-home-desc': 'İlk 3D Model Projelerim',
+
+        // Certificates Page
+        'certs-redhat': 'RedHat Sistem Yönetimi',
+        'certs-redhat-desc': 'RedHat Sertifikeli Sistem Yöneticisi',
+        'certs-teknofest': 'Teknofest 2025',
+        'certs-teknofest-desc': 'Sürü İnsansız Hava Aracı Kategorisi'
     },
 
     ru: {
@@ -1271,7 +1448,66 @@ const translations = {
 
         // New translations for "View Projects" and "View Certificates" buttons
         'btn-view-projects': 'Проекты',
-        'btn-view-certificates': 'Сертификаты'
+        'btn-view-certificates': 'Сертификаты',
+
+        // Hobbies Details
+        'hobby-photo-title': 'Фотография',
+        'hobby-photo-desc': 'Захватывать моменты и исследовать мир через объектив',
+        'hobby-paint-title': 'Рисование',
+        'hobby-paint-desc': 'Выражать творчество через цвета и мазки кисти',
+        'hobby-game-title': 'Разработка Игр',
+        'hobby-game-desc': 'Создавать захватывающие миры и интерактивные впечатления',
+
+        // Contact Details
+        'contact-title-heading': 'Связаться',
+        'contact-heading': 'Давайте Свяжемся',
+        'contact-desc': 'Я всегда открыт для обсуждения новых возможностей, интересных проектов или просто для разговора о технологиях и инновациях.',
+        'contact-name': 'Ваше Имя',
+        'contact-email': 'Ваш Email',
+        'contact-msg': 'Ваше Сообщение',
+        'btn-send': 'Отправить Сообщение',
+
+        // Skills Details
+        'skill-flutter-name': 'Flutter',
+        'skill-html-name': 'HTML/CSS',
+        'skill-csharp-name': 'C#',
+        'skill-java-name': 'Java',
+        'skill-python-name': 'Python',
+        'skill-pascal-name': 'Pascal',
+        'skill-3d-name': '3D Моделирование (Blender)',
+        'skill-ui-name': 'UI/UX Дизайн',
+        'skill-game-name': 'Разработка Игр',
+        'skill-ai-name': 'Искусственный Интеллект',
+
+        // Projects Page
+        'projects-software': 'Программные Проекты',
+        'project-pawconnect': 'PawConnect',
+        'project-pawconnect-desc': 'PawConnect - это оптимизированная платформа, которая связывает приюты для животных с семьями, желающими усыновить, добровольчествовать или пожертвовать. Это упрощает путь поиска "вечного дома" и предоставляет безопасное пространство для поддержки защиты животных.',
+        'project-demo': 'Нажмите, чтобы увидеть статическую версию демо...',
+        'project-planner': 'Planner AI',
+        'project-planner-desc': 'Мобильное приложение-планировщик и напоминатель с поддержкой ИИ, футуристическим UI и функциями умного агента.',
+        'project-coming': 'Скоро в Google Play Store...',
+        'tech-html': 'Html&Css',
+        'tech-js-php': 'Javascript&PHP',
+        'tech-mobile': 'Mobile&Desktop',
+        'tech-mysql': 'MySQL',
+        'tech-flutter': 'Flutter',
+        'tech-ai': 'ИИ',
+        'tech-blender': 'Blender',
+        'tech-3d': '3D',
+        'tech-ar': 'AR/VR',
+        'projects-modeling': 'Проекты Моделирования',
+        'project-indoor-pool': 'Крытый Бассейн 3D Модель',
+        'project-indoor-pool-desc': 'Крытый бассейн с турецкой баней и сауной',
+        'btn-view-3d': 'Нажмите для просмотра 3D модели на новой странице',
+        'project-home': 'Дом 3D Модель',
+        'project-home-desc': 'Мой первый проект 3D модели',
+
+        // Certificates Page
+        'certs-redhat': 'Администрирование Систем RedHat',
+        'certs-redhat-desc': 'Сертифицированный Администратор Систем RedHat',
+        'certs-teknofest': 'Технофест 2025',
+        'certs-teknofest-desc': 'Категория Роевых Дронов'
     }
 };
 
@@ -1281,8 +1517,8 @@ function initLanguageSelector() {
     const languageDropdown = document.getElementById('languageDropdown');
     const currentLang = document.querySelector('.current-lang');
 
-    // Always start with English (reset on each session)
-    const savedLanguage = 'en'; // Force reset to English
+    // Dil tercihini localStorage'dan al
+    const savedLanguage = localStorage.getItem('siteLang') || 'en';
     setLanguage(savedLanguage);
 
     // Toggle dropdown
@@ -1300,6 +1536,7 @@ function initLanguageSelector() {
     document.querySelectorAll('.language-option').forEach(option => {
         option.addEventListener('click', () => {
             const lang = option.getAttribute('data-lang');
+            localStorage.setItem('siteLang', lang);
             setLanguage(lang);
             languageDropdown.classList.remove('active');
 
@@ -1331,94 +1568,79 @@ function setLanguage(lang) {
 
 // Update page content with translations
 function updatePageContent(lang) {
-    const currentTranslations = translations[lang];
+    const t = translations[lang] || translations['en'];
 
-    // Navigation
-    document.querySelectorAll('.nav-link').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === '#home') link.textContent = currentTranslations['nav-home'];
-        if (href === '#about') link.textContent = currentTranslations['nav-about'];
-        if (href === '#projects') link.textContent = currentTranslations['nav-projects'];
-        if (href === '#skills') link.textContent = currentTranslations['nav-skills'];
-        if (href === '#certificates') link.textContent = currentTranslations['nav-certificates'];
-        if (href === '#hobbies') link.textContent = currentTranslations['nav-hobbies'];
-        if (href === '#contact') link.textContent = currentTranslations['nav-contact'];
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = t[key];
+            } else {
+                el.textContent = t[key];
+            }
+        }
     });
 
+    // Navigation
+    document.querySelectorAll('.nav-link').forEach((el, i) => {
+        const keys = ['nav-home', 'nav-about', 'nav-projects', 'nav-skills', 'nav-certificates', 'nav-hobbies', 'nav-contact'];
+        if (t[keys[i]]) el.textContent = t[keys[i]];
+    });
     // Hero Section
     const titleLine = document.querySelector('.word-compute');
-    if (titleLine) titleLine.textContent = currentTranslations['word-compute'];
-
+    if (titleLine) titleLine.textContent = t['word-compute'];
     const titleoText = document.querySelector('.letter-o-text');
-    if (titleoText) titleoText.textContent = currentTranslations['letter-o'];
-
+    if (titleoText) titleoText.textContent = t['letter-o'];
     const titleEngineering = document.querySelector('.word-engineering');
-    if (titleEngineering) titleEngineering.textContent = currentTranslations['word-engineering'];
-
+    if (titleEngineering) titleEngineering.textContent = t['word-engineering'];
     const titleSubtitle = document.querySelector('.title-subtitle');
-    if (titleSubtitle) titleSubtitle.textContent = currentTranslations['hero-subtitle'];
-
+    if (titleSubtitle) titleSubtitle.textContent = t['hero-subtitle'];
     const heroDescription = document.querySelector('.hero-description');
-    if (heroDescription) heroDescription.textContent = currentTranslations['hero-description'];
-
+    if (heroDescription) heroDescription.textContent = t['hero-description'];
     // Section Titles
     const aboutTitle = document.querySelector('#about .section-title');
-    if (aboutTitle) aboutTitle.textContent = currentTranslations['about-title'];
-
+    if (aboutTitle) aboutTitle.textContent = t['about-title'];
     const projectsTitle = document.querySelector('#projects .section-title');
-    if (projectsTitle) projectsTitle.textContent = currentTranslations['projects-title'];
-
+    if (projectsTitle) projectsTitle.textContent = t['projects-title'];
     const skillsTitle = document.querySelector('#skills .section-title');
-    if (skillsTitle) skillsTitle.textContent = currentTranslations['skills-title'];
-
+    if (skillsTitle) skillsTitle.textContent = t['skills-title'];
     const certificatesTitle = document.querySelector('#certificates .section-title');
-    if (certificatesTitle) certificatesTitle.textContent = currentTranslations['certificates-title'];
-
+    if (certificatesTitle) certificatesTitle.textContent = t['certificates-title'];
     const hobbiesTitle = document.querySelector('#hobbies .section-title');
-    if (hobbiesTitle) hobbiesTitle.textContent = currentTranslations['hobbies-title'];
-
+    if (hobbiesTitle) hobbiesTitle.textContent = t['hobbies-title'];
     const contactTitle = document.querySelector('#contact .section-title');
-    if (contactTitle) contactTitle.textContent = currentTranslations['contact-title'];
-
+    if (contactTitle) contactTitle.textContent = t['contact-title'];
     // About Section
     const aboutRole = document.querySelector('.about-text h3');
-    if (aboutRole) aboutRole.textContent = currentTranslations['about-role'];
-
-    // Sadece #about-description güncellensin
-
-    // Skills Categories
-    const skillCategories = document.querySelectorAll('.skill-category h3');
-    if (skillCategories[0]) skillCategories[0].textContent = currentTranslations['skills-programming'];
-    if (skillCategories[1]) skillCategories[1].textContent = currentTranslations['skills-languages'];
-    if (skillCategories[2]) skillCategories[2].textContent = currentTranslations['skills-specialized'];
-
-    // Language Skills
-    const langSkills = document.querySelectorAll('#skills .skill-category:nth-child(2) .skill-name');
-    if (langSkills[0]) langSkills[0].textContent = currentTranslations['lang-english'];
-    if (langSkills[1]) langSkills[1].textContent = currentTranslations['lang-turkish'];
-    if (langSkills[2]) langSkills[2].textContent = currentTranslations['lang-turkmen'];
-    if (langSkills[3]) langSkills[3].textContent = currentTranslations['lang-russian'];
-
-    const langLevels = document.querySelectorAll('#skills .skill-category:nth-child(2) .skill-level');
-    if (langLevels[0]) langLevels[0].textContent = currentTranslations['lang-level-b2'];
-    if (langLevels[1]) langLevels[1].textContent = currentTranslations['lang-level-c1'];
-    if (langLevels[2]) langLevels[2].textContent = currentTranslations['lang-level-c2'];
-    if (langLevels[3]) langLevels[3].textContent = currentTranslations['lang-level-a1'];
-
-    // Footer
-    const footerCopyright = document.querySelector('.footer p');
-    if (footerCopyright) footerCopyright.textContent = currentTranslations['footer-copyright'];
-
-    // About section
+    if (aboutRole) aboutRole.textContent = t['about-role'];
+    // About description
     const aboutDescription = document.getElementById('about-description');
     if (aboutDescription) {
-        aboutDescription.innerHTML = translations[lang]['about-description'] || translations['en']['about-description'];
+        aboutDescription.innerHTML = t['about-description'] || translations['en']['about-description'];
     }
-
+    // Skills Categories
+    const skillCategories = document.querySelectorAll('.skill-category h3');
+    if (skillCategories[0]) skillCategories[0].textContent = t['skills-programming'];
+    if (skillCategories[1]) skillCategories[1].textContent = t['skills-languages'];
+    if (skillCategories[2]) skillCategories[2].textContent = t['skills-specialized'];
+    // Language Skills
+    const langSkills = document.querySelectorAll('#skills .skill-category:nth-of-type(2) .skill-name');
+    if (langSkills[0]) langSkills[0].textContent = t['lang-english'];
+    if (langSkills[1]) langSkills[1].textContent = t['lang-turkish'];
+    if (langSkills[2]) langSkills[2].textContent = t['lang-turkmen'];
+    if (langSkills[3]) langSkills[3].textContent = t['lang-russian'];
+    const langLevels = document.querySelectorAll('#skills .skill-category:nth-of-type(2) .skill-level');
+    if (langLevels[0]) langLevels[0].textContent = t['lang-level-b2'];
+    if (langLevels[1]) langLevels[1].textContent = t['lang-level-c1'];
+    if (langLevels[2]) langLevels[2].textContent = t['lang-level-c2'];
+    if (langLevels[3]) langLevels[3].textContent = t['lang-level-a1'];
+    // Footer
+    const footerCopyright = document.querySelector('.footer p');
+    if (footerCopyright) footerCopyright.textContent = t['footer-copyright'];
     // Hero Buttons
     const projectsBtn = document.querySelector('.btn-projects');
-    if (projectsBtn) projectsBtn.textContent = currentTranslations['btn-view-projects'];
-
+    if (projectsBtn) projectsBtn.textContent = t['btn-view-projects'];
     const certificatesBtn = document.querySelector('.btn-certificates');
-    if (certificatesBtn) certificatesBtn.textContent = currentTranslations['btn-view-certificates'];
+    if (certificatesBtn) certificatesBtn.textContent = t['btn-view-certificates'];
 }

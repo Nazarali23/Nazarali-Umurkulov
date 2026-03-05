@@ -1199,6 +1199,7 @@ body {
 }
 
 .projects-grid {
+    margin-bottom: 15px;
     display: grid;
     gap: 1.5rem;
     /* Further reduced from 2rem */

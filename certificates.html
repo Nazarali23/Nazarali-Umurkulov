@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR BAŞLANGIÇ -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -35,9 +34,7 @@
             </div>
         </div>
     </nav>
-    <!-- NAVBAR BİTİŞ -->
 
-    <!-- Certificates Section -->
     <section id="certificates" class="certificates" style="padding-top:120px;">
         <div class="container">
             <div class="section-header">
@@ -45,6 +42,26 @@
                 <div class="title-underline"></div>
             </div>
             <div class="certificates-grid">
+                <div class="certificate-card" data-pdf="cert/RedHat_SysAdm.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>RedHat System Administration</h3>
+                    <p>RedHat Certified System Administrator</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="certificate-card" data-pdf="cert/Teknofest-KB.pdf">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Teknofest 2025</h3>
+                    <p>Swarm Drone Category</p>
+                    <div class="certificate-preview">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
                 <div class="certificate-card" data-pdf="cert/Üretken_Yapay_Zeka_ile_LLM_Atölyesi_Sertifika.pdf">
                     <div class="certificate-icon">
                         <i class="fas fa-certificate"></i>
@@ -212,7 +229,6 @@
         </div>
     </footer>
 
-    <!-- Modal for Certificates -->
     <div class="certificate-modal" id="certificateModal">
         <div class="certificate-modal-content">
             <span class="close-modal">&times;</span>
@@ -223,7 +239,6 @@
     </div>
     <script src="script.js"></script>
     <script>
-        // HTML içeriği tamamen yüklendikten sonra fonksiyonu çağır
         document.addEventListener('DOMContentLoaded', initCertificateHandlers);
         document.addEventListener('DOMContentLoaded', initNavigation);
         document.addEventListener('DOMContentLoaded', initScrollAnimations);
